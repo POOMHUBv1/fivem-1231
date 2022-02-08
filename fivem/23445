@@ -1,0 +1,71 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local TextButton = Instance.new("TextButton")
+local UICorner = Instance.new("UICorner")
+local PoomHub = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+local UICorner_3 = Instance.new("UICorner")
+local Loading = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+Frame.Position = UDim2.new(0.381195337, 0, 0.407361954, 0)
+Frame.Size = UDim2.new(0, 393, 0, 165)
+
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.Position = UDim2.new(0.022900762, 0, 0.0666666701, 0)
+TextButton.Size = UDim2.new(0, 374, 0, 143)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = ""
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextSize = 14.000
+
+UICorner.Parent = TextButton
+
+PoomHub.Name = "PoomHub"
+PoomHub.Parent = Frame
+PoomHub.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+PoomHub.Position = UDim2.new(0.244377688, 0, -0.0531986505, 0)
+PoomHub.Size = UDim2.new(0, 200, 0, 40)
+PoomHub.Font = Enum.Font.SourceSans
+PoomHub.Text = "Poom Hub"
+PoomHub.TextColor3 = Color3.fromRGB(0, 0, 0)
+PoomHub.TextScaled = true
+PoomHub.TextSize = 14.000
+PoomHub.TextWrapped = true
+
+UICorner_2.Parent = PoomHub
+
+UICorner_3.Parent = Frame
+
+Loading.Name = "Play...."
+Loading.Parent = Frame
+Loading.BackgroundColor3 = Color3.fromRGB(193, 24, 24)
+Loading.Position = UDim2.new(0.134860054, 0, 0.345454544, 0)
+Loading.Size = UDim2.new(0, 287, 0, 50)
+Loading.Font = Enum.Font.SourceSans
+Loading.Text = "Five M"
+Loading.TextColor3 = Color3.fromRGB(255, 255, 249)
+Loading.TextScaled = true
+Loading.TextSize = 14.000
+Loading.TextWrapped = true
+Loading.MouseButton1Down:connect(function()
+local Fire = Instance.new("Fire")
+Fire.Parent = game.Players.LocalPlayer.Character.RightHand
+Fire.Heat = 5
+Fire.Size = 2
+end)
+
+UICorner_4.Parent = Loading
